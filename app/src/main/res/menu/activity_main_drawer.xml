@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Palcos">
+        <menu>
+            <item
+                android:id="@+id/nav_md"
+                android:checkable="false"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Mestre Dominguinhos" />
+            <item
+                android:id="@+id/nav_cultpop"
+                android:checkable="false"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Cultura Popular" />
+            <item
+                android:id="@+id/nav_inst"
+                android:checkable="false"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Instrumental" />
+            <item
+                android:id="@+id/nav_pop"
+                android:checkable="false"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Pop" />
+            <item
+                android:id="@+id/nav_forro"
+                android:checkable="false"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Forró" />
+        </menu>
+
+    </item>
+    <item android:title="Outros">
+        <menu>
+            <item
+                android:id="@+id/nav_camera"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="Contato" />
+            <item
+                android:id="@+id/nav_manage"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Sobre" />
+        </menu>
+    </item>
+</menu>

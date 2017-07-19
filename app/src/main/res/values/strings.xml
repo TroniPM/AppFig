@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">1Festival de Inverno de Garanhuns - FIG</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_compartilhar">Compartilhar</string>
+    <string name="title_activity_palco">PalcoActivity</string>
+    <string name="title_activity_dia">DiaActivity</string>
+</resources>
