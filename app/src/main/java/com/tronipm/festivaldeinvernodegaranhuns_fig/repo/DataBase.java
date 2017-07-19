@@ -91,6 +91,29 @@ public class DataBase {
         palco5.arrayDias.add(dia7);
         palco5.arrayDias.add(dia8);
         palco5.arrayDias.add(dia9);
+        palco6.arrayDias.add(dia1);
+        palco6.arrayDias.add(dia2);
+        palco6.arrayDias.add(dia3);
+        palco6.arrayDias.add(dia4);
+        palco6.arrayDias.add(dia5);
+        palco6.arrayDias.add(dia6);
+        palco6.arrayDias.add(dia7);
+        palco6.arrayDias.add(dia8);
+        palco6.arrayDias.add(dia9);
+        palco7.arrayDias.add(dia5);
+        palco7.arrayDias.add(dia6);
+        palco7.arrayDias.add(dia7);
+        palco7.arrayDias.add(dia8);
+        palco7.arrayDias.add(dia9);
+        palco8.arrayDias.add(dia1);
+        palco8.arrayDias.add(dia2);
+        palco8.arrayDias.add(dia3);
+        palco8.arrayDias.add(dia4);
+        palco8.arrayDias.add(dia5);
+        palco8.arrayDias.add(dia6);
+        palco8.arrayDias.add(dia7);
+        palco8.arrayDias.add(dia8);
+        palco8.arrayDias.add(dia9);
         /*TODO artistas*/
         //Palco1
         //dia1
@@ -524,6 +547,13 @@ public class DataBase {
         artistas.add(artista);
         //dia9
         artista = new Artista("Boi Tira Teima - Um Boi que Canta e Encanta (Ponto de Cultura Tira Teima)", "17h", dia9.id, palco7.id);
+        artistas.add(artista);
+        /*palco8*/
+        //dia5
+        artista = new Artista("Orquestra de Câmara de Pernambuco e Guinga", "16h30 - Solistas: Guilherme Calzavar (violão)," +
+                " Cláudio Moura (violão) e Roberta Belo (oboé) |Regência: José Renato Accioly", dia1.id, palco8.id);
+        artistas.add(artista);
+        artista = new Artista("Cida Moreira – \"Soledade\"", "21h", dia1.id, palco8.id);
         artistas.add(artista);
 
     }
