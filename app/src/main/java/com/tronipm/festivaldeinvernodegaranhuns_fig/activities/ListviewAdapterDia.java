@@ -74,8 +74,8 @@ public class ListviewAdapterDia extends BaseAdapter {
         //e define os valores nos itens.
         final Dia item = itens.get(position);
         itemHolder.imgIcon.setImageResource(item.image);
-        itemHolder.txtDataCompleta.setText(item.dataCompleta);
-        itemHolder.txtDiaDaSemana.setText(item.diaDaSemana);
+        itemHolder.txtDataCompleta.setText(item.diaDaSemana);
+        itemHolder.txtDiaDaSemana.setText(item.dataCompleta);
 
         //retorna a view com as informações
         return convertView;

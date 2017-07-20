@@ -16,11 +16,11 @@
             android:checkable="false"
             android:icon="@drawable/hotel"
             android:title="@string/nav_hot" />
-        <item
+        <!--<item
             android:id="@+id/nav_pontur"
             android:checkable="false"
             android:icon="@drawable/pontoturistico"
-            android:title="@string/nav_pontur" />
+            android:title="@string/nav_pontur" />-->
         <item
             android:id="@+id/nav_mercado"
             android:checkable="false"

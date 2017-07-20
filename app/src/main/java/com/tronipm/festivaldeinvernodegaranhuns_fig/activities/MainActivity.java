@@ -1,6 +1,8 @@
 package com.tronipm.festivaldeinvernodegaranhuns_fig.activities;
 
+import android.app.Notification;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -19,6 +21,8 @@ import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Palco;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.repo.DataBase;
 
 import java.util.ArrayList;
+
+import br.com.goncalves.pugnotification.notification.PugNotification;
 
 /**
  * Created by Mateus on 19/07/2017.
@@ -41,14 +45,10 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_palco);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "COmpartilhar Palco", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+        try {
+            setTitle(this.getResources().getString(R.string.title_activity_palco));
+        } catch (Exception e) {
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -99,12 +99,12 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.act_main, menu);
         return true;
-    }
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -134,23 +134,40 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_hot) {
             Intent novaintent = new Intent(MainActivity.this, HotelActivity.class);
             this.startActivity(novaintent);
-        } else if (id == R.id.nav_pontur) {
+        } /*else if (id == R.id.nav_pontur) {
             Intent novaintent = new Intent(MainActivity.this, PontoTuristicoActivity.class);
             this.startActivity(novaintent);
-        } else if (id == R.id.nav_mercado) {
+        } */ else if (id == R.id.nav_mercado) {
             Intent novaintent = new Intent(MainActivity.this, MercadoActivity.class);
             this.startActivity(novaintent);
         } else if (id == R.id.nav_hosp) {
             Intent novaintent = new Intent(MainActivity.this, HospitalActivity.class);
             this.startActivity(novaintent);
-
         } else if (id == R.id.nav_contato) {
-
+            //criarNotificacao("Festival de Inverno de Garanhuns", "Notificação do aplicativo... Não perca nada!");
+            String url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdmiz43BQ6kRLNays_jx75dPO4gYdzEksg7l5qwIslWGOaZwQ/viewform";
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
         } else if (id == R.id.nav_info) {
+            Intent novaintent = new Intent(MainActivity.this, SobreActivity.class);
+            this.startActivity(novaintent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void criarNotificacao(String titulo, String txt) {
+        PugNotification.with(MainActivity.this).load()
+                .title(titulo)
+                .message(txt)
+                .bigTextStyle("FIG")
+                .smallIcon(R.mipmap.ic_launcher)
+                .largeIcon(R.mipmap.ic_launcher)
+                .flags(Notification.DEFAULT_ALL)
+                .simple()
+                .build();
     }
 }

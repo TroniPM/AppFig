@@ -37,17 +37,17 @@ public class DataBase {
         palcos.add(palco1);
         Palco palco2 = new Palco("Palco Cultura Popular", "Sem descrição", "11111", "2222222", 2, R.drawable.guadalajara1);
         palcos.add(palco2);
-        Palco palco3 = new Palco("Palco Instrumental", "Parque Ruber Van Der Linden ", "11111", "2222222", 3, R.drawable.guadalajara1);
+        Palco palco3 = new Palco("Palco Instrumental", "Parque Ruber Van Der Linden ", "11111", "2222222", 3, R.drawable.paupombo1);
         palcos.add(palco3);
-        Palco palco4 = new Palco("Palco Pop", "Sem descrição", "11111", "2222222", 4, R.drawable.guadalajara1);
+        Palco palco4 = new Palco("Palco Pop", "Parque Euclides Dourado", "11111", "2222222", 4, R.drawable.edourado1);
         palcos.add(palco4);
-        Palco palco5 = new Palco("Palco Forró", "Sem descrição", "11111", "2222222", 5, R.drawable.guadalajara1);
+        Palco palco5 = new Palco("Palco Forró", "Parque Euclides Dourado", "11111", "2222222", 5, R.drawable.edourado1);
         palcos.add(palco5);
-        Palco palco6 = new Palco("Palco Som na Rural", "Parque Euclides Dourado", "11111", "2222222", 6, R.drawable.guadalajara1);
+        Palco palco6 = new Palco("Palco Som na Rural", "Parque Euclides Dourado", "11111", "2222222", 6, R.drawable.edourado1);
         palcos.add(palco6);
-        Palco palco7 = new Palco("Palco Mamulengos e Pontos de Cultura", "Parque Euclides Dourado", "11111", "2222222", 7, R.drawable.guadalajara1);
+        Palco palco7 = new Palco("Palco Mamulengos e Pontos de Cultura", "Parque Euclides Dourado", "11111", "2222222", 7, R.drawable.edourado1);
         palcos.add(palco7);
-        Palco palco8 = new Palco("Palco Catedral", "Igreja de Santo Antônio", "11111", "2222222", 8, R.drawable.guadalajara1);
+        Palco palco8 = new Palco("Palco Catedral", "Igreja de Santo Antônio", "11111", "2222222", 8, R.drawable.catedral1);
         palcos.add(palco8);
         /*TODO DIAS*/
         Dia dia1 = new Dia("21/07/2017", "Sexta-feira", 1, R.drawable.i21);
@@ -711,15 +711,19 @@ public class DataBase {
         rest = new Restaurante("Estação Doçura II", "Av. Rui Barbosa, 1081 - Heliópolis, Garanhuns - PE, 55297-050", "3762-4013", -8.8823503, -36.5069105);
         restaurantes.add(rest);
 
-        Hospital hosp = new Hospital("Hospital A", "endereco", 888888, 9999999);
+        Hospital hosp = new Hospital("Hospital Regional Dom Moura", " Av. Simoa Gomes, s/n - Heliópolis", -8.8817735, -36.4862706);
         hospitais.add(hosp);
-        hosp = new Hospital("Hospital B", "endereco", 888888, 9999999);
+        hosp = new Hospital("Hospital Monte Sinai", "Av. Djalma Dutra, 222 - Heliópolis", -8.8856944, -36.4826372);
         hospitais.add(hosp);
-        hosp = new Hospital("Hospital C", "endereco", 888888, 9999999);
+        hosp = new Hospital("Hospital Infantil Palmira Sales", "R. Cap. João Leite, 146 - Santo Antônio", -8.8976389, -36.4980231);
         hospitais.add(hosp);
-        hosp = new Hospital("Hospital D", "endereco", 888888, 9999999);
+        hosp = new Hospital("Casa de Saúde e Maternidade Nossa Senhora do Perpétuo Socorro", "Av. Simoa Gomes, 33 - Heliópolis", -8.8868697, -36.4849051);
         hospitais.add(hosp);
-        hosp = new Hospital("Hospital E", "endereco", 888888, 9999999);
+        hosp = new Hospital("UPAE Garanhuns", "Rodovia BR 423 - Km 96,8 - Magano", -8.8787169, -36.4960134);
+        hospitais.add(hosp);
+        hosp = new Hospital("Clínica Dr. José Walter", "Av. Rui Barbosa, 631 - Heliópolis", -8.8817734, -36.4928367);
+        hospitais.add(hosp);
+        hosp = new Hospital("Memorial Clinic", "R. Ernesto Dourado, 654 - Heliópolis", -8.8817734, -36.4928367);
         hospitais.add(hosp);
 
         PontoTuristico ptur = new PontoTuristico("PontoTuristico A", 888888, 9999999, R.drawable.guadalajara1);
@@ -733,15 +737,21 @@ public class DataBase {
         ptur = new PontoTuristico("PontoTuristico E", 888888, 9999999, R.drawable.guadalajara1);
         pontosTuristicos.add(ptur);
 
-        Mercado merc = new Mercado("Mercado A", "endereco", 888888, 9999999);
+        Mercado merc = new Mercado("Bonanza Supermercados", "R. Quinze de Novembro, 214 - Santo Antônio", -8.8875394, -36.4879443);
         mercados.add(merc);
-        merc = new Mercado("Mercado B", "endereco", 888888, 9999999);
+        merc = new Mercado("Bonanza Supermercados", "R. Barão do Rio Branco, 5 - Santo Antônio", -8.891949, -36.493695);
         mercados.add(merc);
-        merc = new Mercado("Mercado C", "endereco", 888888, 9999999);
+        merc = new Mercado("Supermercado Bonanza", "Av. Rui Barbosa, 996 - Heliópolis", -8.8875394, -36.4879443);
         mercados.add(merc);
-        merc = new Mercado("Mercado D", "endereco", 888888, 9999999);
+        merc = new Mercado("Hiper Todo Dia", "R. Dr. José Mariano, 562-650 - Santo Antônio", -8.8875394, -36.4879443);
         mercados.add(merc);
-        merc = new Mercado("Mercado E", "endereco", 888888, 9999999);
+        merc = new Mercado("Assaí Atacadista", "Avenida Irga, s/n - Severiano Moraes Filho", -8.8814338, -36.4782455);
+        mercados.add(merc);
+        merc = new Mercado("Supermercado Ipiranga", "Av. Júlio Brasileiro, 1061 - Heliópolis", -8.8844132, -36.4792867);
+        mercados.add(merc);
+        merc = new Mercado("CEAGA - Central de Abastecimento de Garanhuns", "R. Dom Mario Vilas Boa, 120 - São José", -8.8863601, -36.4904877);
+        mercados.add(merc);
+        merc = new Mercado("Supermercado TodoDia", "R. Melo Peixoto, 208 - Santo Antônio", -8.8921015, -36.4979003);
         mercados.add(merc);
     }
 }

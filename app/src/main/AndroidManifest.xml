@@ -50,6 +50,9 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"></meta-data>
         </activity>
         <activity
             android:name=".activities.MercadoActivity"
@@ -70,6 +73,14 @@
         <activity
             android:name=".activities.HospitalActivity"
             android:label="@string/title_activity_hospital"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.SobreActivity"
+            android:label="@string/title_activity_sobre"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

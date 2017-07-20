@@ -5,7 +5,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_compartilhar">Compartilhar</string>
-    <string name="title_activity_palco">PalcoActivity</string>
+    <string name="action_search">Procurar</string>
+    <string name="title_activity_palco">FIG - Palcos</string>
     <string name="title_activity_dia">DiaActivity</string>
     <string name="navdrawer_title">Tudo sem propaganda é mais legal :)</string>
     <string name="navdrawer_subtitle">Festival de Inverno de Garanhuns</string>
@@ -19,11 +20,13 @@
     <string name="nav_others">Outros</string>
     <string name="nav_contact">Contato</string>
     <string name="nav_info">Sobre</string>
-    <string name="title_activity_hotel">HotelActivity</string>
-    <string name="title_activity_restaurante">RestauranteActivity</string>
-    <string name="title_activity_mercado">MercadoActivity</string>
-    <string name="title_activity_ponto_turistico">PontoTuristicoActivity</string>
-    <string name="title_activity_hospital">HospitalActivity</string>
+    <string name="title_activity_hotel">Hotéis</string>
+    <string name="title_activity_restaurante">Restaurantes</string>
+    <string name="title_activity_mercado">Mercados</string>
+    <string name="title_activity_ponto_turistico">Pontos Turísticos</string>
+    <string name="title_activity_hospital">Hospitais</string>
+    <string name="title_activity_sobre">Sobre</string>
+
     <string name="open_at_gmaps">Clique para abrir no Google Maps</string>
 
     <string name="tripadvisor">TripAdvisor:</string>
