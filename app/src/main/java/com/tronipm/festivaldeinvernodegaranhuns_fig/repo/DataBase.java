@@ -5,7 +5,9 @@ import android.util.Log;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.R;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Artista;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Dia;
+import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Hotel;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Palco;
+import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Restaurante;
 
 import java.util.ArrayList;
 
@@ -19,6 +21,8 @@ public class DataBase {
     public ArrayList<Palco> palcos = new ArrayList<>();
     public ArrayList<Dia> dias = new ArrayList<>();
     public ArrayList<Artista> artistas = new ArrayList<>();
+    public ArrayList<Hotel> hoteis = new ArrayList<>();
+    public ArrayList<Restaurante> restaurantes = new ArrayList<>();
 
     public DataBase() {
         Log.d(this.getClass().getSimpleName(), "init()");
@@ -556,5 +560,38 @@ public class DataBase {
         artista = new Artista("Cida Moreira – \"Soledade\"", "21h", dia1.id, palco8.id);
         artistas.add(artista);
 
+
+        Hotel hotel = new Hotel("Tavares Correia", "Av. Rui Barbosa, 296 - HELIÓPOLIS, 55296-300", "(87) 3762-8700", 4, 8.1, 81, -8.8862707, -36.4845737);
+        hoteis.add(hotel);
+        hotel = new Hotel("Centro de Turismo e Lazer Sesc Garanhuns", "R. Manoel Clemente, 136 - Santo Antônio", "(87) 3762-8300", 4.5, -1, -1, -8.8920178, -36.4938565);
+        hoteis.add(hotel);
+        hotel = new Hotel("Palace Hotel", "Av. Rui Barbosa, 626 - Heliópolis", "(87) 3762-8750", 3.5, -1, 76, -8.8847141, -36.4819518);
+        hoteis.add(hotel);
+        hotel = new Hotel("Hotel Permanente", "endereco", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Hotel Kamei", "Rua 13 de Maio, 85 | Centro", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Mael Plaza", "Avenida Julio Brasileiro, 651, Heliópolis", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Fazenda Alvorada", "Rua Duarte Coelho 110, Garanhuns", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Hotel Maria Elisa", "Praça Dom Moura, 322 | Santo Antônio", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Hotel Rodrigues", "Avenida Rui Barbosa 688 | Heliopolis", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Hotel Real", "Av Júlio Brasileiro, 1473 | Heliópolis", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Hotel Azevedo", "Rua Coronel Antônio Souto, 57 | São José", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Figueiredo Hotel", "Avenida Oliveira Lima 1 And 337, | Heliopolis", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Hotel D'Nyl", "Praça Dom Moura 302 | Santo Antonio", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Ipanema Hotel", "Rua Doutor Jardim 42 | Sto Antonio", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Diplomata Hotel", "Rua Doutor Jose Mariano 194 | Sto Antonio", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
+        hotel = new Hotel("Hotel Village Confort Garanhuns", "Av Santo Antônio, 149 | Centro", "telefone", -1, -1, -1, 99999, 88888);
+        hoteis.add(hotel);
     }
 }
