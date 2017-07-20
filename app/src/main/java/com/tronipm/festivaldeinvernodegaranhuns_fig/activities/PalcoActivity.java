@@ -18,6 +18,11 @@ import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Palco;
 
 import java.util.ArrayList;
 
+/**
+ * Created by Mateus on 19/07/2017.
+ * For project FestivaldeInvernodeGaranhuns-FIG. <https://github.com/TroniPM/AppFig>
+ * Contact: <paulomatew@gmail.com>
+ */
 public class PalcoActivity extends AppCompatActivity {
 
     private ListviewAdapterDia novoadapter;

@@ -2,8 +2,6 @@ package com.tronipm.festivaldeinvernodegaranhuns_fig.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.tronipm.festivaldeinvernodegaranhuns_fig.R;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Palco;
@@ -23,6 +20,11 @@ import com.tronipm.festivaldeinvernodegaranhuns_fig.repo.DataBase;
 
 import java.util.ArrayList;
 
+/**
+ * Created by Mateus on 19/07/2017.
+ * For project FestivaldeInvernodeGaranhuns-FIG. <https://github.com/TroniPM/AppFig>
+ * Contact: <paulomatew@gmail.com>
+ */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -125,19 +127,27 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        /*if (id == R.id.nav_camera) {
+        if (id == R.id.nav_rest) {
+            Intent novaintent = new Intent(MainActivity.this, RestauranteActivity.class);
+            this.startActivity(novaintent);
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_hot) {
+            Intent novaintent = new Intent(MainActivity.this, HotelActivity.class);
+            this.startActivity(novaintent);
+        } else if (id == R.id.nav_pontur) {
+            Intent novaintent = new Intent(MainActivity.this, PontoTuristicoActivity.class);
+            this.startActivity(novaintent);
+        } else if (id == R.id.nav_mercado) {
+            Intent novaintent = new Intent(MainActivity.this, MercadoActivity.class);
+            this.startActivity(novaintent);
+        } else if (id == R.id.nav_hosp) {
+            Intent novaintent = new Intent(MainActivity.this, HospitalActivity.class);
+            this.startActivity(novaintent);
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_contato) {
 
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }*/
+        } else if (id == R.id.nav_info) {
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

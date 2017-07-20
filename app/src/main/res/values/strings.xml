@@ -7,4 +7,22 @@
     <string name="action_compartilhar">Compartilhar</string>
     <string name="title_activity_palco">PalcoActivity</string>
     <string name="title_activity_dia">DiaActivity</string>
+    <string name="navdrawer_title">Tudo sem propaganda é mais legal :)</string>
+    <string name="navdrawer_subtitle">Festival de Inverno de Garanhuns</string>
+
+    <string name="nav_home">Início</string>
+    <string name="nav_rest">Restaurantes</string>
+    <string name="nav_hot">Hotéis</string>
+    <string name="nav_pontur">Pontos Turísticos</string>
+    <string name="nav_mercado">Mercados</string>
+    <string name="nav_hosp">Hospitais</string>
+    <string name="nav_others">Outros</string>
+    <string name="nav_contact">Contato</string>
+    <string name="nav_info">Sobre</string>
+    <string name="title_activity_hotel">HotelActivity</string>
+    <string name="title_activity_restaurante">RestauranteActivity</string>
+    <string name="title_activity_mercado">MercadoActivity</string>
+    <string name="title_activity_ponto_turistico">PontoTuristicoActivity</string>
+    <string name="title_activity_hospital">HospitalActivity</string>
+    <string name="open_at_gmaps">Clique para abrir no Google Maps</string>
 </resources>

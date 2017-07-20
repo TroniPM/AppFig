@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Mateus on 19/07/2017.
- * For project FestivaldeInvernodeGaranhuns-FIG.
+ * For project FestivaldeInvernodeGaranhuns-FIG. <https://github.com/TroniPM/AppFig>
  * Contact: <paulomatew@gmail.com>
  */
 

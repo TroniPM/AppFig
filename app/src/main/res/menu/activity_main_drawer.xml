@@ -1,45 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Palcos">
-        <menu>
-            <item
-                android:id="@+id/nav_md"
-                android:checkable="false"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Mestre Dominguinhos" />
-            <item
-                android:id="@+id/nav_cultpop"
-                android:checkable="false"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Cultura Popular" />
-            <item
-                android:id="@+id/nav_inst"
-                android:checkable="false"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Instrumental" />
-            <item
-                android:id="@+id/nav_pop"
-                android:checkable="false"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Pop" />
-            <item
-                android:id="@+id/nav_forro"
-                android:checkable="false"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Forró" />
-        </menu>
+    <menu>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_rest"
+            android:checkable="false"
+            android:icon="@drawable/food"
+            android:title="@string/nav_rest" />
+        <item
+            android:id="@+id/nav_hot"
+            android:checkable="false"
+            android:icon="@drawable/hotel"
+            android:title="@string/nav_hot" />
+        <item
+            android:id="@+id/nav_pontur"
+            android:checkable="false"
+            android:icon="@drawable/pontoturistico"
+            android:title="@string/nav_pontur" />
+        <item
+            android:id="@+id/nav_mercado"
+            android:checkable="false"
+            android:icon="@drawable/mercado"
+            android:title="@string/nav_mercado" />
+        <item
+            android:id="@+id/nav_hosp"
+            android:checkable="false"
+            android:icon="@drawable/hospital"
+            android:title="@string/nav_hosp" />
+    </menu>
 
-    </item>
-    <item android:title="Outros">
+    <item android:title="@string/nav_others">
         <menu>
             <item
-                android:id="@+id/nav_camera"
-                android:icon="@drawable/ic_menu_camera"
-                android:title="Contato" />
+                android:id="@+id/nav_contato"
+                android:icon="@drawable/email"
+                android:title="@string/nav_contact" />
             <item
-                android:id="@+id/nav_manage"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="Sobre" />
+                android:id="@+id/nav_info"
+                android:icon="@drawable/information"
+                android:title="@string/nav_info" />
         </menu>
     </item>
 </menu>

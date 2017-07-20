@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * Created by Mateus on 14/06/2017.
- * For project NutriCampus.
+ * Created by Mateus on 19/07/2017.
+ * For project FestivaldeInvernodeGaranhuns-FIG. <https://github.com/TroniPM/AppFig>
  * Contact: <paulomatew@gmail.com>
  */
 public class SharedPreferencesManager {

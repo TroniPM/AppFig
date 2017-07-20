@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.tronipm.festivaldeinvernodegaranhuns_fig.R;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Palco;
+import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.PontoTuristico;
 
 import java.util.List;
 
@@ -18,12 +19,12 @@ import java.util.List;
  * For project FestivaldeInvernodeGaranhuns-FIG. <https://github.com/TroniPM/AppFig>
  * Contact: <paulomatew@gmail.com>
  */
-public class ListviewAdapterPalco extends BaseAdapter {
-    private static final String LOG = ListviewAdapterPalco.class.getName() + " <LOG>";
+public class ListviewAdapterPontoTuristico extends BaseAdapter {
+    private static final String LOG = ListviewAdapterPontoTuristico.class.getName() + " <LOG>";
     private Context context;
-    private List<Palco> itens;
+    private List<PontoTuristico> itens;
 
-    public ListviewAdapterPalco(Context context, List<Palco> itens) {
+    public ListviewAdapterPontoTuristico(Context context, List<PontoTuristico> itens) {
         //Itens do listview
         this.itens = itens;
         //Objeto responsável por pegar o Layout do item.
@@ -48,20 +49,19 @@ public class ListviewAdapterPalco extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         final ItemSuporte itemHolder;
-        final LayoutInflater inflater = ((MainActivity) context).getLayoutInflater();
+        final LayoutInflater inflater = ((PontoTuristicoActivity) context).getLayoutInflater();
         // final View dialogView = inflater.inflate(R.layout.confirm_item, null);
         //se a view estiver nula (nunca criada), inflamos o layout nela.
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.itemlistviewlayout_palco, null);
+            convertView = inflater.inflate(R.layout.itemlistviewlayout_pontoturistico, null);
 
             //cria um item de suporte para não precisarmos sempre
             //inflar as mesmas informacoes
             itemHolder = new ItemSuporte();
 
 
-            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewPalco));
-            itemHolder.txtPalcoNome = ((TextView) convertView.findViewById(R.id.textViewPalcoNome));
-            itemHolder.txtPalcoDescricao = ((TextView) convertView.findViewById(R.id.textViewPalcoDesc));
+            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewPontoTuristico));
+            itemHolder.txtPalcoNome = ((TextView) convertView.findViewById(R.id.textViewPontoTuristicoNome));
 
             //define os itens na view;
             convertView.setTag(itemHolder);
@@ -72,21 +72,12 @@ public class ListviewAdapterPalco extends BaseAdapter {
 
         //pega os dados da lista
         //e define os valores nos itens.
-        final Palco item = itens.get(position);
-        itemHolder.imgIcon.setImageResource(item.image);
+        final PontoTuristico item = itens.get(position);
+        itemHolder.imgIcon.setImageResource(item.imagem);
         itemHolder.txtPalcoNome.setText(item.nome);
-        itemHolder.txtPalcoDescricao.setText(item.descricao);
 
         //retorna a view com as informações
         return convertView;
-    }
-
-    public void updateItens(List<Palco> itens) {
-        this.itens = itens;
-
-        ((MainActivity) context).invalidateOptionsMenu();
-        notifyDataSetChanged();
-
     }
 
     /**
@@ -96,6 +87,5 @@ public class ListviewAdapterPalco extends BaseAdapter {
 
         ImageView imgIcon;
         TextView txtPalcoNome;
-        TextView txtPalcoDescricao;
     }
 }

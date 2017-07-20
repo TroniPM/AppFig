@@ -19,6 +19,11 @@ import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Palco;
 
 import java.util.ArrayList;
 
+/**
+ * Created by Mateus on 19/07/2017.
+ * For project FestivaldeInvernodeGaranhuns-FIG. <https://github.com/TroniPM/AppFig>
+ * Contact: <paulomatew@gmail.com>
+ */
 public class DiaActivity extends AppCompatActivity {
     public static Dia dia = null;
     //public static String palcoNome = null;

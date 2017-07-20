@@ -5,15 +5,18 @@ import android.util.Log;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.R;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Artista;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Dia;
+import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Hospital;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Hotel;
+import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Mercado;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Palco;
+import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.PontoTuristico;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Restaurante;
 
 import java.util.ArrayList;
 
 /**
  * Created by Mateus on 19/07/2017.
- * For project FestivaldeInvernodeGaranhuns-FIG.
+ * For project FestivaldeInvernodeGaranhuns-FIG. <https://github.com/TroniPM/AppFig>
  * Contact: <paulomatew@gmail.com>
  */
 
@@ -23,6 +26,9 @@ public class DataBase {
     public ArrayList<Artista> artistas = new ArrayList<>();
     public ArrayList<Hotel> hoteis = new ArrayList<>();
     public ArrayList<Restaurante> restaurantes = new ArrayList<>();
+    public ArrayList<Hospital> hospitais = new ArrayList<>();
+    public ArrayList<PontoTuristico> pontosTuristicos = new ArrayList<>();
+    public ArrayList<Mercado> mercados = new ArrayList<>();
 
     public DataBase() {
         Log.d(this.getClass().getSimpleName(), "init()");
@@ -561,37 +567,79 @@ public class DataBase {
         artistas.add(artista);
 
 
-        Hotel hotel = new Hotel("Tavares Correia", "Av. Rui Barbosa, 296 - HELIÓPOLIS, 55296-300", "(87) 3762-8700", 4, 8.1, 81, -8.8862707, -36.4845737);
+        Hotel hotel = new Hotel("Tavares Correia", "Av. Rui Barbosa, 296 - Heliópolis, Garanhuns - PE, 55296-300", "(87) 3762-8700", 4, 8.1, 81, -8.8862707, -36.4845737);
         hoteis.add(hotel);
-        hotel = new Hotel("Centro de Turismo e Lazer Sesc Garanhuns", "R. Manoel Clemente, 136 - Santo Antônio", "(87) 3762-8300", 4.5, -1, -1, -8.8920178, -36.4938565);
+        hotel = new Hotel("Centro de Turismo e Lazer Sesc Garanhuns", "R. Manoel Clemente, 136 - Santo Antônio, Garanhuns - PE", "(87) 3762-8300", 4.5, -1, -1, -8.8920178, -36.4938565);
         hoteis.add(hotel);
-        hotel = new Hotel("Palace Hotel", "Av. Rui Barbosa, 626 - Heliópolis", "(87) 3762-8750", 3.5, -1, 76, -8.8847141, -36.4819518);
+        hotel = new Hotel("Palace Hotel", "Av. Rui Barbosa, 626 - Heliópolis, Garanhuns - PE", "(87) 3762-8750", 3.5, -1, 76, -8.8847141, -36.4819518);
         hoteis.add(hotel);
-        hotel = new Hotel("Hotel Permanente", "endereco", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Hotel Permanente", "Av. Santo Antônio, 179 - Centro, Garanhuns - PE, 55290-000", "(87) 3762-9080", 4.0, 7.5, 78, -8.8910673, -36.5630901);
         hoteis.add(hotel);
-        hotel = new Hotel("Hotel Kamei", "Rua 13 de Maio, 85 | Centro", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Hotel Kamei", "R. Treze de Maio, 85 - Centro, Garanhuns - PE, 55295-040", "(87) 3761-3664", 4.0, 8.5, -1, -8.8900072, -36.5640859);
         hoteis.add(hotel);
-        hotel = new Hotel("Mael Plaza", "Avenida Julio Brasileiro, 651, Heliópolis", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Mael Plaza", "Av. Júlio Brasileiro, 651 - Heliópolis, Garanhuns - PE, 55295-475", "(87) 3762-1222", -1, -1, 76, -8.8836255, -36.5527935);
         hoteis.add(hotel);
-        hotel = new Hotel("Fazenda Alvorada", "Rua Duarte Coelho 110, Garanhuns", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Fazenda Alvorada", " R. Duarte Coelho, 110 - José Maria Dourado, Garanhuns - PE, 55297-800", "(87) 3761-0601", 4.0, -1, -1, -8.8735085, -36.5442196);
         hoteis.add(hotel);
-        hotel = new Hotel("Hotel Maria Elisa", "Praça Dom Moura, 322 | Santo Antônio", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Hotel Maria Eliza", " Praça Dom Moura, 322 - Centro, Garanhuns ", "(87) 3762-0057", -1, -1, -1, -8.8882094, -8.8882094);
         hoteis.add(hotel);
-        hotel = new Hotel("Hotel Rodrigues", "Avenida Rui Barbosa 688 | Heliopolis", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Hotel Rodrigues", "Av. Rui Barbosa, 688 - Heliópolis, Garanhuns - PE, 55298-000", "(87) 3761-0441", -1, -1, -1, -8.8842747, -36.5515324);
         hoteis.add(hotel);
-        hotel = new Hotel("Hotel Real", "Av Júlio Brasileiro, 1473 | Heliópolis", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Hotel Real", "Av. Júlio Brasileiro, 1473 - Heliópolis, Garanhuns - PE, 55297-010", "(87) 3761-2160", -1, -1, -1, -8.8787065, -36.5460265);
         hoteis.add(hotel);
-        hotel = new Hotel("Hotel Azevedo", "Rua Coronel Antônio Souto, 57 | São José", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Hotel Azevedo", " R. Coronel Antonio Souto, 57 - São José, Garanhuns - PE, 55295-270", "(87) 3762-6969", -1, -1, -1, -8.8876022, -36.5625132);
         hoteis.add(hotel);
-        hotel = new Hotel("Figueiredo Hotel", "Avenida Oliveira Lima 1 And 337, | Heliopolis", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Figueiredo Hotel", "Av. Oliveira Lima, 337 - Heliópois, Garanhuns - PE, 55290-000", "(87) 3762-3237", -1, -1, -1, -8.8837995, -36.5501617);
         hoteis.add(hotel);
-        hotel = new Hotel("Hotel D'Nyl", "Praça Dom Moura 302 | Santo Antonio", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Hotel D'Nyl", "Praça Dom Moura, 302 - Centro, Garanhuns - PE, 55295-220", "(87) 3761-0998", -1, -1, -1, -8.8885306, -36.5615544);
         hoteis.add(hotel);
-        hotel = new Hotel("Ipanema Hotel", "Rua Doutor Jardim 42 | Sto Antonio", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Ipanema Hotel", "Praça Dr.Manoel Jardim, 42 - Santo Antônio, Garanhuns - PE, 55293-280", "(87) 3763-1232", -1, -1, -1, -8.8923975, -36.5656956);
         hoteis.add(hotel);
-        hotel = new Hotel("Diplomata Hotel", "Rua Doutor Jose Mariano 194 | Sto Antonio", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Diplomata Hotel", " R. Dr. José Mariano, 194 - Santo Antônio, Garanhuns - PE, 55295-335", "(87) 3761-0539", -1, -1, -1, -8.8896705, -36.5624596);
         hoteis.add(hotel);
-        hotel = new Hotel("Hotel Village Confort Garanhuns", "Av Santo Antônio, 149 | Centro", "telefone", -1, -1, -1, 99999, 88888);
+        hotel = new Hotel("Hotel Village Confort Garanhuns", "Avenida Santo Antônio, 149 - Centro, Garanhuns - PE, 55293-000", "(87) 3761-3624", -1, -1, -1, -8.8911078, -36.5628319);
         hoteis.add(hotel);
+
+        Restaurante rest = new Restaurante("Nome", "endereco", "telefone", 888888, 9999999);
+        restaurantes.add(rest);
+        rest = new Restaurante("Nome", "endereco", "telefone", 888888, 9999999);
+        restaurantes.add(rest);
+        rest = new Restaurante("Nome", "endereco", "telefone", 888888, 9999999);
+        restaurantes.add(rest);
+        rest = new Restaurante("Nome", "endereco", "telefone", 888888, 9999999);
+        restaurantes.add(rest);
+        rest = new Restaurante("Nome", "endereco", "telefone", 888888, 9999999);
+        restaurantes.add(rest);
+        rest = new Restaurante("Nome", "endereco", "telefone", 888888, 9999999);
+        restaurantes.add(rest);
+        rest = new Restaurante("Nome", "endereco", "telefone", 888888, 9999999);
+        restaurantes.add(rest);
+
+        Hospital hosp = new Hospital("HOSP AAAA", "endereco", 888888, 9999999);
+        hospitais.add(hosp);
+        hosp = new Hospital("HOSP BBBB", "endereco", 888888, 9999999);
+        hospitais.add(hosp);
+        hosp = new Hospital("HOSP CCCC", "endereco", 888888, 9999999);
+        hospitais.add(hosp);
+        hosp = new Hospital("HOSP DDD", "endereco", 888888, 9999999);
+        hospitais.add(hosp);
+
+        PontoTuristico ptur = new PontoTuristico("HOSP AAAA", 888888, 9999999, R.drawable.guadalajara1);
+        pontosTuristicos.add(ptur);
+        ptur = new PontoTuristico("HOSP BBBB", 888888, 9999999, R.drawable.guadalajara1);
+        pontosTuristicos.add(ptur);
+        ptur = new PontoTuristico("HOSP CCCC", 888888, 9999999, R.drawable.guadalajara1);
+        pontosTuristicos.add(ptur);
+        ptur = new PontoTuristico("HOSP DDD", 888888, 9999999, R.drawable.guadalajara1);
+        pontosTuristicos.add(ptur);
+
+        Mercado merc = new Mercado("MERCADO AAAA", "endereco", 888888, 9999999);
+        mercados.add(merc);
+        merc = new Mercado("MERCADO BBBB", "endereco", 888888, 9999999);
+        mercados.add(merc);
+        merc = new Mercado("MERCADO CCCC", "endereco", 888888, 9999999);
+        mercados.add(merc);
+        merc = new Mercado("MERCADO DDD", "endereco", 888888, 9999999);
+        mercados.add(merc);
     }
 }

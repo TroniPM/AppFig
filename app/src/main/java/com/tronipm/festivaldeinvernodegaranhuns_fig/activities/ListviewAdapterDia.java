@@ -13,7 +13,11 @@ import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Dia;
 
 import java.util.List;
 
-
+/**
+ * Created by Mateus on 19/07/2017.
+ * For project FestivaldeInvernodeGaranhuns-FIG. <https://github.com/TroniPM/AppFig>
+ * Contact: <paulomatew@gmail.com>
+ */
 public class ListviewAdapterDia extends BaseAdapter {
     private static final String LOG = ListviewAdapterDia.class.getName() + " <LOG>";
     private Context context;

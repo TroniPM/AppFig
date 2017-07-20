@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.tronipm.festivaldeinvernodegaranhuns_fig.R;
+import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Hotel;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Palco;
 
 import java.util.List;
@@ -18,12 +19,12 @@ import java.util.List;
  * For project FestivaldeInvernodeGaranhuns-FIG. <https://github.com/TroniPM/AppFig>
  * Contact: <paulomatew@gmail.com>
  */
-public class ListviewAdapterPalco extends BaseAdapter {
-    private static final String LOG = ListviewAdapterPalco.class.getName() + " <LOG>";
+public class ListviewAdapterHotel extends BaseAdapter {
+    private static final String LOG = ListviewAdapterHotel.class.getName() + " <LOG>";
     private Context context;
-    private List<Palco> itens;
+    private List<Hotel> itens;
 
-    public ListviewAdapterPalco(Context context, List<Palco> itens) {
+    public ListviewAdapterHotel(Context context, List<Hotel> itens) {
         //Itens do listview
         this.itens = itens;
         //Objeto responsável por pegar o Layout do item.
@@ -48,20 +49,22 @@ public class ListviewAdapterPalco extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         final ItemSuporte itemHolder;
-        final LayoutInflater inflater = ((MainActivity) context).getLayoutInflater();
+        final LayoutInflater inflater = ((HotelActivity) context).getLayoutInflater();
         // final View dialogView = inflater.inflate(R.layout.confirm_item, null);
         //se a view estiver nula (nunca criada), inflamos o layout nela.
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.itemlistviewlayout_palco, null);
+            convertView = inflater.inflate(R.layout.itemlistviewlayout_hotel, null);
 
             //cria um item de suporte para não precisarmos sempre
             //inflar as mesmas informacoes
             itemHolder = new ItemSuporte();
 
 
-            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewPalco));
-            itemHolder.txtPalcoNome = ((TextView) convertView.findViewById(R.id.textViewPalcoNome));
-            itemHolder.txtPalcoDescricao = ((TextView) convertView.findViewById(R.id.textViewPalcoDesc));
+            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewHotel));
+            itemHolder.txtNome = ((TextView) convertView.findViewById(R.id.textViewHotelNome));
+            itemHolder.txtEndereco = ((TextView) convertView.findViewById(R.id.textViewHotelEnd));
+            itemHolder.txtTelefone = ((TextView) convertView.findViewById(R.id.textViewHotelTelefone));
+            itemHolder.txtNotas = ((TextView) convertView.findViewById(R.id.textViewHotelNotas));
 
             //define os itens na view;
             convertView.setTag(itemHolder);
@@ -72,22 +75,18 @@ public class ListviewAdapterPalco extends BaseAdapter {
 
         //pega os dados da lista
         //e define os valores nos itens.
-        final Palco item = itens.get(position);
-        itemHolder.imgIcon.setImageResource(item.image);
-        itemHolder.txtPalcoNome.setText(item.nome);
-        itemHolder.txtPalcoDescricao.setText(item.descricao);
+        final Hotel item = itens.get(position);
+        //itemHolder.imgIcon.setImageResource(item.image);
+        itemHolder.txtNome.setText(item.nome);
+        itemHolder.txtEndereco.setText(item.endereco);
+        itemHolder.txtTelefone.setText(item.telefone);
+        //do if if exist
+        itemHolder.txtNotas.setText(item.descricao);
 
         //retorna a view com as informações
         return convertView;
     }
 
-    public void updateItens(List<Palco> itens) {
-        this.itens = itens;
-
-        ((MainActivity) context).invalidateOptionsMenu();
-        notifyDataSetChanged();
-
-    }
 
     /**
      * Classe de suporte para os itens do layout.
@@ -95,7 +94,9 @@ public class ListviewAdapterPalco extends BaseAdapter {
     private class ItemSuporte {
 
         ImageView imgIcon;
-        TextView txtPalcoNome;
-        TextView txtPalcoDescricao;
+        TextView txtNome;
+        TextView txtEndereco;
+        TextView txtTelefone;
+        TextView txtNotas;
     }
 }
