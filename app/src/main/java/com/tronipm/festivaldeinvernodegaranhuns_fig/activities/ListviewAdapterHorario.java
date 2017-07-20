@@ -60,8 +60,8 @@ public class ListviewAdapterHorario extends BaseAdapter {
             itemHolder = new ItemSuporte();
 
 
-            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewArtista));
-            itemHolder.txtArtistaNome = ((TextView) convertView.findViewById(R.id.textViewNomeArtista));
+            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageView));
+            itemHolder.txtArtistaNome = ((TextView) convertView.findViewById(R.id.textViewNome));
             itemHolder.txtHorarioDoArtista = ((TextView) convertView.findViewById(R.id.textViewHorario));
 
             //define os itens na view;

@@ -60,11 +60,13 @@ public class ListviewAdapterHotel extends BaseAdapter {
             itemHolder = new ItemSuporte();
 
 
-            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewHotel));
-            itemHolder.txtNome = ((TextView) convertView.findViewById(R.id.textViewHotelNome));
-            itemHolder.txtEndereco = ((TextView) convertView.findViewById(R.id.textViewHotelEnd));
-            itemHolder.txtTelefone = ((TextView) convertView.findViewById(R.id.textViewHotelTelefone));
-            itemHolder.txtNotas = ((TextView) convertView.findViewById(R.id.textViewHotelNotas));
+            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageView));
+            itemHolder.txtNome = ((TextView) convertView.findViewById(R.id.textViewNome));
+            itemHolder.txtEndereco = ((TextView) convertView.findViewById(R.id.textViewEndereco));
+            itemHolder.txtTelefone = ((TextView) convertView.findViewById(R.id.textViewTelefone));
+            itemHolder.txtTrip = ((TextView) convertView.findViewById(R.id.textViewTripAdvisor));
+            itemHolder.txtBook = ((TextView) convertView.findViewById(R.id.textViewBooking));
+            itemHolder.txtTriv = ((TextView) convertView.findViewById(R.id.textViewTrivago));
 
             //define os itens na view;
             convertView.setTag(itemHolder);
@@ -80,8 +82,35 @@ public class ListviewAdapterHotel extends BaseAdapter {
         itemHolder.txtNome.setText(item.nome);
         itemHolder.txtEndereco.setText(item.endereco);
         itemHolder.txtTelefone.setText(item.telefone);
-        //do if if exist
-        itemHolder.txtNotas.setText(item.descricao);
+
+        if (item.tripadvisor == -1 && item.trivago == -1 && item.booking == -1) {
+            ((TextView) convertView.findViewById(R.id.textViewAval)).setVisibility(View.GONE);
+        }
+
+        if (item.tripadvisor != -1) {
+            itemHolder.txtTrip.setVisibility(View.VISIBLE);
+            itemHolder.txtTrip.setText(context.getString(R.string.tripadvisor)
+                    + " " + String.valueOf(item.tripadvisor));
+        } else {
+            //itemHolder.txtTrip.setText("");
+            itemHolder.txtTrip.setVisibility(View.GONE);
+        }
+        if (item.booking != -1) {
+            itemHolder.txtBook.setVisibility(View.VISIBLE);
+            itemHolder.txtBook.setText(context.getString(R.string.booking)
+                    + " " + String.valueOf(item.booking));
+        } else {
+            //itemHolder.txtBook.setText("");
+            itemHolder.txtBook.setVisibility(View.GONE);
+        }
+        if (item.trivago != -1) {
+            itemHolder.txtTriv.setVisibility(View.VISIBLE);
+            itemHolder.txtTriv.setText(context.getString(R.string.trivago)
+                    + " " + String.valueOf(item.trivago));
+        } else {
+            //itemHolder.txtTriv.setText("");
+            itemHolder.txtTriv.setVisibility(View.GONE);
+        }
 
         //retorna a view com as informações
         return convertView;
@@ -97,6 +126,8 @@ public class ListviewAdapterHotel extends BaseAdapter {
         TextView txtNome;
         TextView txtEndereco;
         TextView txtTelefone;
-        TextView txtNotas;
+        TextView txtTrip;
+        TextView txtBook;
+        TextView txtTriv;
     }
 }

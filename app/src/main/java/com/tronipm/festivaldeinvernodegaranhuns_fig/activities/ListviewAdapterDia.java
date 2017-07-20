@@ -59,8 +59,8 @@ public class ListviewAdapterDia extends BaseAdapter {
             itemHolder = new ItemSuporte();
 
 
-            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewDia));
-            itemHolder.txtDataCompleta = ((TextView) convertView.findViewById(R.id.textViewDiaDataCompelta));
+            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageView));
+            itemHolder.txtDataCompleta = ((TextView) convertView.findViewById(R.id.textViewDataCompleta));
             itemHolder.txtDiaDaSemana = ((TextView) convertView.findViewById(R.id.textViewDiaSemana));
 
             //define os itens na view;

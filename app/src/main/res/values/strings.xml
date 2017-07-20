@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">1Festival de Inverno de Garanhuns - FIG</string>
+    <string name="app_name">1FIG - Festival de Inverno de Garanhuns</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -25,4 +25,9 @@
     <string name="title_activity_ponto_turistico">PontoTuristicoActivity</string>
     <string name="title_activity_hospital">HospitalActivity</string>
     <string name="open_at_gmaps">Clique para abrir no Google Maps</string>
+
+    <string name="tripadvisor">TripAdvisor:</string>
+    <string name="booking">Booking:</string>
+    <string name="trivago">Trivago:</string>
+    <string name="avaliacoes">Avaliações:</string>
 </resources>

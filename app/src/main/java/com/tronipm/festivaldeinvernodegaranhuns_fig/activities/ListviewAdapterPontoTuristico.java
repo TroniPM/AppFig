@@ -60,8 +60,8 @@ public class ListviewAdapterPontoTuristico extends BaseAdapter {
             itemHolder = new ItemSuporte();
 
 
-            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewPontoTuristico));
-            itemHolder.txtPalcoNome = ((TextView) convertView.findViewById(R.id.textViewPontoTuristicoNome));
+            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageView));
+            itemHolder.txtPalcoNome = ((TextView) convertView.findViewById(R.id.textViewNome));
 
             //define os itens na view;
             convertView.setTag(itemHolder);

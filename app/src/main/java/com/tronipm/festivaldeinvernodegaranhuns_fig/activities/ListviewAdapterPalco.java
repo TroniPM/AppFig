@@ -59,9 +59,9 @@ public class ListviewAdapterPalco extends BaseAdapter {
             itemHolder = new ItemSuporte();
 
 
-            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewPalco));
-            itemHolder.txtPalcoNome = ((TextView) convertView.findViewById(R.id.textViewPalcoNome));
-            itemHolder.txtPalcoDescricao = ((TextView) convertView.findViewById(R.id.textViewPalcoDesc));
+            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageView));
+            itemHolder.txtPalcoNome = ((TextView) convertView.findViewById(R.id.textViewNome));
+            itemHolder.txtPalcoDescricao = ((TextView) convertView.findViewById(R.id.textViewDesc));
 
             //define os itens na view;
             convertView.setTag(itemHolder);

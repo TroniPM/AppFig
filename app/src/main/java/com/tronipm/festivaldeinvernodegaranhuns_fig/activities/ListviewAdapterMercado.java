@@ -60,9 +60,9 @@ public class ListviewAdapterMercado extends BaseAdapter {
             itemHolder = new ItemSuporte();
 
 
-            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewMercado));
-            itemHolder.txtNome = ((TextView) convertView.findViewById(R.id.textViewMercadoNome));
-            itemHolder.txtEndereco = ((TextView) convertView.findViewById(R.id.textViewMercadoEndereco));
+            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageView));
+            itemHolder.txtNome = ((TextView) convertView.findViewById(R.id.textViewNome));
+            itemHolder.txtEndereco = ((TextView) convertView.findViewById(R.id.textViewEndereco));
 
             //define os itens na view;
             convertView.setTag(itemHolder);

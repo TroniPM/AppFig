@@ -59,10 +59,10 @@ public class ListviewAdapterRestaurante extends BaseAdapter {
             itemHolder = new ItemSuporte();
 
 
-            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewRestaurante));
-            itemHolder.txtNome = ((TextView) convertView.findViewById(R.id.textViewRestauranteNome));
-            itemHolder.txtEndereco = ((TextView) convertView.findViewById(R.id.textViewRestauranteEndereco));
-            itemHolder.txtTelefone = ((TextView) convertView.findViewById(R.id.textViewRestauranteTelefone));
+            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageView));
+            itemHolder.txtNome = ((TextView) convertView.findViewById(R.id.textViewNome));
+            itemHolder.txtEndereco = ((TextView) convertView.findViewById(R.id.textViewEndereco));
+            itemHolder.txtTelefone = ((TextView) convertView.findViewById(R.id.textViewTelefone));
 
             //define os itens na view;
             convertView.setTag(itemHolder);

@@ -60,9 +60,9 @@ public class ListviewAdapterHospital extends BaseAdapter {
             itemHolder = new ItemSuporte();
 
 
-            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageViewHospital));
-            itemHolder.txtNome = ((TextView) convertView.findViewById(R.id.textViewHospitalNome));
-            itemHolder.txtEndereco = ((TextView) convertView.findViewById(R.id.textViewHospitalEndereco));
+            itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageView));
+            itemHolder.txtNome = ((TextView) convertView.findViewById(R.id.textViewNome));
+            itemHolder.txtEndereco = ((TextView) convertView.findViewById(R.id.textViewEndereco));
 
             //define os itens na view;
             convertView.setTag(itemHolder);
