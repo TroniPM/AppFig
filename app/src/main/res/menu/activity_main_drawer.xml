@@ -21,11 +21,11 @@
             android:checkable="false"
             android:icon="@drawable/hotel"
             android:title="@string/nav_hot" />
-        <!--<item
+        <item
             android:id="@+id/nav_pontur"
             android:checkable="false"
             android:icon="@drawable/pontoturistico"
-            android:title="@string/nav_pontur" />-->
+            android:title="@string/nav_pontur" />
         <item
             android:id="@+id/nav_mercado"
             android:checkable="false"
@@ -41,6 +41,10 @@
     <item android:title="@string/nav_others">
         <menu>
             <item
+                android:id="@+id/nav_compartilhar"
+                android:icon="@drawable/share"
+                android:title="@string/nav_compartilhar" />
+            <item
                 android:id="@+id/nav_contato"
                 android:icon="@drawable/email"
                 android:title="@string/nav_contact" />
@@ -48,6 +52,11 @@
                 android:id="@+id/nav_info"
                 android:icon="@drawable/information"
                 android:title="@string/nav_info" />
+
+            <item
+                android:id="@+id/nav_github"
+                android:icon="@drawable/github"
+                android:title="@string/nav_github" />
         </menu>
     </item>
 </menu>

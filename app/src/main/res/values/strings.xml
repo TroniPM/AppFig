@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">1FIG - Festival de Inverno de Garanhuns</string>
+    <string name="app_name">FIG - Festival de Inverno de Garanhuns</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -7,7 +7,7 @@
     <string name="action_compartilhar">Compartilhar</string>
     <string name="action_search">Procurar</string>
     <string name="title_activity_palco">FIG - Palcos</string>
-    <string name="title_activity_dia">DiaActivity</string>
+    <string name="title_activity_dia">Dia</string>
     <string name="navdrawer_title">Tudo sem propaganda é mais legal :)</string>
     <string name="navdrawer_subtitle">Festival de Inverno de Garanhuns</string>
 
@@ -20,6 +20,7 @@
     <string name="nav_others">Outros</string>
     <string name="nav_contact">Contato</string>
     <string name="nav_info">Sobre</string>
+    <string name="nav_polos">Polos</string>
     <string name="title_activity_hotel">Hotéis</string>
     <string name="title_activity_restaurante">Restaurantes</string>
     <string name="title_activity_mercado">Mercados</string>
@@ -33,5 +34,6 @@
     <string name="booking">Booking:</string>
     <string name="trivago">Trivago:</string>
     <string name="avaliacoes">Avaliações:</string>
-    <string name="nav_polos">nav_polos</string>
+    <string name="nav_compartilhar">Compartilhar</string>
+    <string name="nav_github">Projeto Open Source</string>
 </resources>

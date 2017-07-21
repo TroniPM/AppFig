@@ -11,11 +11,13 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.R;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Palco;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.repo.DataBase;
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity
     private ArrayList<Palco> arrayPalcos = null;
     private ListviewAdapterPalco novoadapter;
     private ListView novoListview;
+
+    private static GoogleAnalytics sAnalytics;
+    private static Tracker sTracker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +65,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         try {
             //getActionBar().setTitle("FIG");
-            setTitle("FIG");
+            setTitle("FIG - Palcos");
         } catch (Exception ex) {
         }
 
@@ -82,11 +87,21 @@ public class MainActivity extends AppCompatActivity
                 MainActivity.this.startActivity(novaintent);
             }
         });
+
+        // [START shared_tracker]
+        // Obtain the shared Tracker instance.
+        sAnalytics = GoogleAnalytics.getInstance(this);
+        sTracker = getDefaultTracker();
+        // [END shared_tracker]
     }
 
-    public void populate() {
+    synchronized public Tracker getDefaultTracker() {
+        // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
+        if (sTracker == null) {
+            sTracker = sAnalytics.newTracker(R.xml.global_tracker);
+        }
 
-
+        return sTracker;
     }
 
     @Override
@@ -121,6 +136,16 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    public void analytics(String categoria, String acao) {
+        // [START custom_event]
+        sTracker.send(new HitBuilders.EventBuilder()
+                .setCategory(categoria)
+                .setAction(acao)
+                .build());
+        // [END custom_event]
+
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -132,26 +157,45 @@ public class MainActivity extends AppCompatActivity
             this.startActivity(novaintent);
             // Handle the camera action
         } else if (id == R.id.nav_hot) {
+            analytics("nav_drawer", "hoteis");
             Intent novaintent = new Intent(MainActivity.this, HotelActivity.class);
             this.startActivity(novaintent);
-        } /*else if (id == R.id.nav_pontur) {
+        } else if (id == R.id.nav_pontur) {
+            analytics("nav_drawer", "pontos_turisticos");
             Intent novaintent = new Intent(MainActivity.this, PontoTuristicoActivity.class);
             this.startActivity(novaintent);
-        } */ else if (id == R.id.nav_mercado) {
+        } else if (id == R.id.nav_mercado) {
+            analytics("nav_drawer", "mercados");
             Intent novaintent = new Intent(MainActivity.this, MercadoActivity.class);
             this.startActivity(novaintent);
         } else if (id == R.id.nav_hosp) {
+            analytics("nav_drawer", "hospitais");
             Intent novaintent = new Intent(MainActivity.this, HospitalActivity.class);
             this.startActivity(novaintent);
+        } else if (id == R.id.nav_compartilhar) {
+            analytics("nav_drawer", "compartilhar");
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Vê só esse aplicativo! Bem legal, fácil de usar e completo. https://play.google.com/store/apps/details?id=com.tronipm.festivaldeinvernodegaranhuns_fig");
+            sendIntent.setType("text/plain");
+            startActivity(sendIntent);
         } else if (id == R.id.nav_contato) {
+            analytics("nav_drawer", "contato");
             //criarNotificacao("Festival de Inverno de Garanhuns", "Notificação do aplicativo... Não perca nada!");
             String url = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdmiz43BQ6kRLNays_jx75dPO4gYdzEksg7l5qwIslWGOaZwQ/viewform";
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
             startActivity(i);
         } else if (id == R.id.nav_info) {
+            analytics("nav_drawer", "informacoes");
             Intent novaintent = new Intent(MainActivity.this, SobreActivity.class);
             this.startActivity(novaintent);
+        } else if (id == R.id.nav_github) {
+            analytics("nav_drawer", "github");
+            String url = "https://github.com/TroniPM/AppFig";
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -61,7 +61,8 @@ public class ListviewAdapterPontoTuristico extends BaseAdapter {
 
 
             itemHolder.imgIcon = ((ImageView) convertView.findViewById(R.id.imageView));
-            itemHolder.txtPalcoNome = ((TextView) convertView.findViewById(R.id.textViewNome));
+            itemHolder.txtNome = ((TextView) convertView.findViewById(R.id.textViewNome));
+            itemHolder.txtEndereco = ((TextView) convertView.findViewById(R.id.textViewEndereco));
 
             //define os itens na view;
             convertView.setTag(itemHolder);
@@ -74,7 +75,8 @@ public class ListviewAdapterPontoTuristico extends BaseAdapter {
         //e define os valores nos itens.
         final PontoTuristico item = itens.get(position);
         itemHolder.imgIcon.setImageResource(item.imagem);
-        itemHolder.txtPalcoNome.setText(item.nome);
+        itemHolder.txtNome.setText(item.nome);
+        itemHolder.txtEndereco.setText(item.endereco);
 
         //retorna a view com as informações
         return convertView;
@@ -86,6 +88,7 @@ public class ListviewAdapterPontoTuristico extends BaseAdapter {
     private class ItemSuporte {
 
         ImageView imgIcon;
-        TextView txtPalcoNome;
+        TextView txtNome;
+        TextView txtEndereco;
     }
 }

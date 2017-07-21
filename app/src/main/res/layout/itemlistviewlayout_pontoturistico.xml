@@ -29,4 +29,14 @@
         android:layout_toRightOf="@+id/imageView"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewNome"
+        android:layout_alignStart="@+id/textViewNome"
+        android:layout_below="@+id/textViewNome"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp" />
 </RelativeLayout>

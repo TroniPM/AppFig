@@ -8,11 +8,12 @@ package com.tronipm.festivaldeinvernodegaranhuns_fig.entidades;
 
 public class PontoTuristico {
     public int id = 0, imagem;
-    public String nome;
+    public String nome, endereco;
     public double latitude, longitude;
 
-    public PontoTuristico(String nome, double latitude, double longitude, int imagem) {
+    public PontoTuristico(String nome, String endereco, double latitude, double longitude, int imagem) {
         this.nome = nome;
+        this.endereco = endereco;
         this.latitude = latitude;
         this.longitude = longitude;
         this.imagem = imagem;
