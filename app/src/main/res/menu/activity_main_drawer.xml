@@ -6,6 +6,11 @@
             android:checked="true"
             android:icon="@drawable/home"
             android:title="@string/nav_home" />
+        <!--<item
+            android:id="@+id/nav_polos"
+            android:checkable="false"
+            android:icon="@drawable/polos"
+            android:title="@string/nav_polos" />-->
         <item
             android:id="@+id/nav_rest"
             android:checkable="false"

@@ -9,6 +9,8 @@ import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Hospital;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Hotel;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Mercado;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Palco;
+import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Polo;
+import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.PoloProgramacao;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.PontoTuristico;
 import com.tronipm.festivaldeinvernodegaranhuns_fig.entidades.Restaurante;
 
@@ -29,6 +31,7 @@ public class DataBase {
     public ArrayList<Hospital> hospitais = new ArrayList<>();
     public ArrayList<PontoTuristico> pontosTuristicos = new ArrayList<>();
     public ArrayList<Mercado> mercados = new ArrayList<>();
+    public ArrayList<Polo> polos = new ArrayList<>();
 
     public DataBase() {
         Log.d(this.getClass().getSimpleName(), "init()");
@@ -559,11 +562,51 @@ public class DataBase {
         artista = new Artista("Boi Tira Teima - Um Boi que Canta e Encanta (Ponto de Cultura Tira Teima)", "17h", dia9.id, palco7.id);
         artistas.add(artista);
         /*palco8*/
-        //dia5
+        //dia1
         artista = new Artista("Orquestra de Câmara de Pernambuco e Guinga", "16h30 - Solistas: Guilherme Calzavar (violão)," +
                 " Cláudio Moura (violão) e Roberta Belo (oboé) |Regência: José Renato Accioly", dia1.id, palco8.id);
         artistas.add(artista);
-        artista = new Artista("Cida Moreira – \"Soledade\"", "21h", dia1.id, palco8.id);
+        artista = new Artista("Cida Moreira – 'Soledade'", "21h", dia1.id, palco8.id);
+        artistas.add(artista);
+        //dia2
+        artista = new Artista("Quinteto Danilo Brito", "16h30 - Danilo Brito (bandolim) | Carlos Moura (violão de 7 cordas) | Guilherme Girardi (violão) | Lucas Arantes" +
+                "(cavaquinho) | Xelina Barros (pandeiro)", dia2.id, palco8.id);
+        artistas.add(artista);
+        artista = new Artista("Francis Hime e Olivia Hime – 'Sem Mais Adeus'", "21h", dia2.id, palco8.id);
+        artistas.add(artista);
+        //dia3
+        artista = new Artista("Orquestra de Câmara de Pernambuco", "16h30 - Coro de Câmara do Conservatório Pernambucano de Música\n" +
+                "Solistas: Leonardo Neiva (Barítono – SP) |Gleyce Melo (Soprano –PE) | Mônica Muniz (Mezzo-soprano – PE) | " +
+                "Participações Especiais: Rodrigo Cruz (Barítono), Natália Duarte (Soprano) e Flávio Soares (Tenor)." +
+                "Ópera e Musicais | Regência: José Renato Accioly", dia3.id, palco8.id);
+        artistas.add(artista);
+        artista = new Artista("Ellyana Caldas (Piano)", "21h", dia3.id, palco8.id);
+        artistas.add(artista);
+        artista = new Artista("Participações especiais", "Bozó (violão 7 Cordas) e Júnior Teles (percussão)", dia3.id, palco8.id);
+        artistas.add(artista);
+        //dia4
+        artista = new Artista("Kristina Miller (Rússia) | Recital e piano", "16h", dia4.id, palco8.id);
+        artistas.add(artista);
+        artista = new Artista("Victor Assuncion (Piano)", "21h", dia4.id, palco8.id);
+        artistas.add(artista);
+        //dia5
+        artista = new Artista("Show 'Em Casa com Luiz Eça'", "16h30 - Toninho Horta (violão e guitarra), Itamar Assiere (piano), Mauro Senise (sopros), Ricardo Costa (bateria), Zé" +
+                " Renato (voz), Igor Eça (baixo e direção musical)", dia5.id, palco8.id);
+        artistas.add(artista);
+        artista = new Artista("Toninho Ferragutti e Bebê Kramer (Duo de Acordeon)", "21h - 'Como Manda o Figurino'", dia5.id, palco8.id);
+        artistas.add(artista);
+        //dia6
+        artista = new Artista("SaGRAMA e Yamandu Costa", "16h30", dia6.id, palco8.id);
+        artistas.add(artista);
+        artista = new Artista("Libertango – 'Tangos Hermanos'", "21h - Estela Caldi (Piano), Alexandre Caldi (Saxofones e Flautas), Marcelo Caldi (Acordeon)", dia6.id, palco8.id);
+        artistas.add(artista);
+        //dia7
+        artista = new Artista("Grupo Instrumental Brasil", "16h", dia7.id, palco8.id);
+        artistas.add(artista);
+        artista = new Artista("Duo Paula Bujes & Pedro Huff (CD Afluências)", "21h", dia7.id, palco8.id);
+        artistas.add(artista);
+        //dia8
+        artista = new Artista("Orquestra Jovem de Pernambuco, com o contratenor Edson Cordeiro", "16h", dia8.id, palco8.id);
         artistas.add(artista);
 
 
@@ -753,5 +796,40 @@ public class DataBase {
         mercados.add(merc);
         merc = new Mercado("Supermercado TodoDia", "R. Melo Peixoto, 208 - Santo Antônio", -8.8921015, -36.4979003);
         mercados.add(merc);
+
+        Polo polo = new Polo("Artes Cênicas", "Parque Euclides Dourado");
+        PoloProgramacao programacao = new PoloProgramacao("Rosa Choque", "18h", "TEATRO ADULTO");
+        polo.programacoes.add(programacao);
+        programacao = new PoloProgramacao("Cena Circo: Mostra de Números Circenses", "16h", "CIRCO");
+        polo.programacoes.add(programacao);
+        programacao = new PoloProgramacao("Cabaret Brecht, canções de Kurt Weill e Bertolt Brecht", "17h", "PROGRAMAÇÃO ESPECIAL");
+        polo.programacoes.add(programacao);
+        programacao = new PoloProgramacao("A Erudita", "18h30", "TEATRO ADULTO");
+        polo.programacoes.add(programacao);
+        programacao = new PoloProgramacao("Bate-papo \"A influência dos contos de Caio Fernando Abreu e Marcelino Freire\"", "20h", "LITERATURA NA CENA");
+        polo.programacoes.add(programacao);
+        programacao = new PoloProgramacao("Réquiem para um rapaz triste", "22h", "LITERATURA NA CENA");
+        polo.programacoes.add(programacao);
+        programacao = new PoloProgramacao("Bicha Oca", "23h30", "LITERATURA NA CENA");
+        polo.programacoes.add(programacao);
+        polos.add(polo);
+        polo = new Polo("Artesanato", "Parque Euclides Dourado");
+        polos.add(polo);
+        polo = new Polo("Artes Visuais", "Av. Dantas Barreto, 34");
+        polos.add(polo);
+        polo = new Polo("Audiovisual", "Cine Eldorado");
+        polos.add(polo);
+        polo = new Polo("Design e Moda", "Av. Dantas Barreto, 34");
+        polos.add(polo);
+        polo = new Polo("Fotografia", "Av. Dantas Barreto, 34");
+        polos.add(polo);
+        polo = new Polo("Gastronomia", "Praça Souto Filho");
+        polos.add(polo);
+        polo = new Polo("Literatura", "Sem local específico");
+        polos.add(polo);
+        polo = new Polo("Pontos de Cultura", "Escola Estadual Henrique Dias");
+        polos.add(polo);
+        polo = new Polo("Projetos Especiais", "Sem local espefífico");
+        polos.add(polo);
     }
 }
